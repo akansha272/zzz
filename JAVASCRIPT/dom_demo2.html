@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom-Node-interface</title>
+    
+</head>
+<body>
+    
+    <h1>Dom - Node - Interface</h1>
+    <div id="first">
+        <p>paragraph 1</p>
+    </div>
+    <script>
+        var mainElement = document.getElementById('first');
+        console.log(mainElement.firstChild.nodeName);
+        console.log(mainElement.lastChild.nodeName);
+        console.log(mainElement.parentNode.nodeName);
+        console.log(mainElement.parentNode.parentNode.parentNode.nodeName);
+        console.log(mainElement.parentNode.nodeName);
+    </script>
+</body>
+</html>

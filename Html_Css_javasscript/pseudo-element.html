@@ -1,0 +1,53 @@
+<!-- :before
+:after
+:First after
+:first-letter
+:first-line
+:Selection -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Element</title>
+    <style>
+        h2::before{
+            content:url(https://clipart-library.com/new_gallery/5-56430_shy-emoji-png-transparent-sad-face-emoji.png);
+        }
+        #demo{
+            width: 94px;
+            height: 94px;
+            background-color: pink;
+        }
+        #demo::before{
+            height: 0;
+            width:38px;
+            content:"";
+            position:absolute;
+            border-bottom: 28px solid pink;
+            border-left: 28px solid rgb(168, 255, 168);
+            border-right: 28px solid rgb(200, 152, 61);         
+        }
+        #demo::after{
+            height: 0;
+            width:38px;
+            content:"";
+            position:absolute;
+            border-top: 28px solid pink;
+            border-left: 28px solid rgb(168, 255, 168);
+            border-right: 28px solid rgb(200, 152, 61);
+        }
+
+    </style>
+</head>
+<body>
+    <h1><center>Pseudo Element</center></h1>
+    <h2>Let's use pseudo element on our Webpage!</h2>
+    <p>Display png image before a paragraph content</p>
+
+    <div id="demo">
+        <p>After the picture paragraph is allowed</p>
+    </div>
+</body>
+</html>

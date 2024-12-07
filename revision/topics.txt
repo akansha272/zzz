@@ -1,0 +1,39 @@
+promise{
+    It is a proxy for value known when the promise is created it allows you to associate handlers with an asyn actions eventual success value or failure reason.
+
+        A promise has three states:
+        1. Pending: The initial state, before the asynchronous operation is complete
+        2. Resolved (Fulfilled): The operation completed successfully
+        3. Rejected: The operation failed, typically with an error
+}
+async/await
+prototype{
+    javascript object must have prototype which is another object that it inherits methods and properties from,
+    key point:
+    1. prototype chain
+    2. constructor function
+    How prototype work:
+    1. prototype of objects
+    2. prototype methods
+}
+event emitter[
+    
+]
+event loop{
+    event loop is a single thread that runs in thebrowser or node.js environment. Especially when dealing with asyn operations like setTimeout, promise and ajax request. javascript single-thread means it can execure only one task at a time but with the event loop it can handle asyn task by offloading certain tasks to be processed later.
+    How the event loop work:
+    1. callstack
+    2. webAPI (settimeout, fetch)
+    3. callback queue (or Task queue)
+    4. event loop
+
+    Event loop phases-
+    - Timer
+    - Pending callback
+    - idle/prepare
+    - poll ->
+    - check/setImmediate
+    - closing callback  
+        - Microtask queue
+        - Macrotask
+}

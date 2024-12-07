@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        div:hover{
+            animation-name: animate-one;
+            animation-duration: 5s;
+        }
+        @keyframes animate-one {
+            0%{
+                background-color: aquamarine;
+            }
+            100%{
+                background-color: purple;
+            }
+        }
+        .abc{
+            width: 1500px;
+            height: 1500px;
+            margin: 50px;
+            background: url(https://clipart-library.com/new_gallery/5-56430_shy-emoji-png-transparent-sad-face-emoji.png) no-repeat;
+            position: relative;
+
+            animation-name: moving;
+            animation-duration: 2s;
+            animation-timing-function: ease-in;
+        }
+        @keyframes moving {
+            from{left:0}
+            to{left:50%}   
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1><center>Animation</center></h1>
+        <p>Lets see the animation</p>
+    </div>
+    <br>
+    <br> 
+    <div class="abc">
+        <p>Animation with timing function</p>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>querySelector</title>
+    <style>
+      div {
+        background-color: pink;
+        margin: 1rem;
+        height: 100px;
+        width: 200px;
+      }
+    </style>
+    <script>
+      const log = document.querySelector("#log");
+      function random(number) {
+        return Math.floor(Math.random() * number);
+      }
+      function setBackgroundColor(id) {
+        log.textContent = "";
+        try {
+          const element = document.querySelector(`#${id}`);
+          const randomColor = `rgb(${random(255)}, ${random(255)}, ${random(
+            255
+          )})`;
+          element.style.backgroundColor = randomColor;
+        } catch (e) {
+          log.textContent = e;
+        }
+      }
+      document.querySelector("#no-escape").addEventListener("click", () => {
+        setBackgroundColor("this?element");
+      });
+      document.querySelector("#css-escape").addEventListener("click", () => {
+        setBackgroundColor(CSS.escape("this?element"));
+      });
+      document.querySelector("#manual-escape").addEventListener("click", () => {
+        setBackgroundColor("this\\?element");
+      });
+    </script>
+  </head>
+  <body>
+    <div id="this?element"></div>
+    <div>
+      <button id="no-escape">No escape</button>
+      <button id="css-escape">CSS escape</button>
+      <button id="manual-escape">Manual escape</button>
+      <pre id="log"></pre>
+    </div>
+  </body>
+</html>

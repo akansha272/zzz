@@ -1,0 +1,10 @@
+{
+    "post":[
+        {"id":1 , "title":"First Post" ,"author":"Jhon"},
+        {"id":2 , "title":"First Post" ,"author":"Jhon"}
+    ],
+    "comments":[
+        {"id":1 , "post_id":1 , "author":"Jhon","content":"great"},
+        {"id":2 , "post_id":1 , "author":"Jhon","content":"Nice"}
+    ]
+}

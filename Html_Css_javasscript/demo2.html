@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Demo</title>
+        <style>
+            .div1{
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                font-style: italic;
+                table, th, td{
+                    border: 1px solid black
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h2><b> Div and Span</b></h2>
+
+        <div class="div1">
+            <h3><u>Table</u></h3>
+            <caption>Information</caption>
+            <table>
+                <thead>
+                    <th>Items</th>
+                    <th>Expenditure</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Stationary</td>
+                        <td>5000</td>
+                    </tr>
+                    <tr>
+                        <td>Digital Device</td>
+                        <td>10000</td>
+                    </tr>
+                    <tr>
+                        <td>Toys</td>
+                        <td>6000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Total</td>
+                        <td>21000</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div> 
+
+        <div class="div2">
+            <h3><u>Types of List</u></h3>
+            <h4>Description List</h4>
+            <dl>
+                <dt>Java</dt>
+                <dd>Java is a platform independent language</dd>
+                <dt>SQL</dt>
+                <dd>Structured Query Language</dd>
+                <dt>React</dt>
+                <dd>User Interface, javascript library</dd>
+            </dl>
+            <h4>Ordered List</h4>
+            <ol start ="5">
+                <li>Java</li>
+                <li>Advanced Java</li>
+                <li>Framework</li>
+                <li>Database</li>
+                <li>Devops</li>
+            </ol>
+            <h4>Unordered List</h4>
+            <ul>
+                <li>Python</li>
+                <ul>
+                    <li>Django</li>
+                    <li>Flask</li>
+                </ul>
+                <li>Javascript</li>
+                <ul>
+                    <li>Angular</li>
+                    <li>Vue</li>
+                </ul>
+            </ul>
+        </div>
+        
+        <div class="div3">
+            <h3><u>Form</u></h3>
+            <h4><i>Register Here</i></h4>
+            <p>Kindly fill up this form to register</p>
+            <label for="username"><b>Username :</b></label>
+            <input type="text" placeholder="Enter username" name="username" id="username" required> <br><br>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter email" name="email" id="email" required> <br><br>
+            <label for="pass" > <b> Password</b></label>
+            <input type="password" name="pass" id="pwd" required /> <br><br>
+            <label for="re-pass" > <b> Repeat Password</b></label>
+            <input type="password" name="re-pass" id="re-pwd" required /> <br><br>
+            <fieldset>
+                <legend> Identification </legend>
+                <label><input type="checkbox" name="id">Aadhar card</label>
+                <label><input type="checkbox" name="driv">driving li</label>
+                <label><input type="checkbox" name="pass">Passport</label>
+                <label><input type="checkbox" name="emp-id">Employeement ID</label>
+                <label><input type="file" name="upload" id="file-select"></label>
+            </fieldset><br><br>
+            <fieldset>
+                <legend>Contact Details</legend>
+                <label>Email Address: <input type="email" name="email"></label>
+                <label>Phone Number: <input type="text" name="phone"></label>
+            </fieldset><br>
+                <br>
+            <fieldset>
+                <legend>Gender Details</legend>
+                <label>Male: <input type="radio" name="male"></label>
+                <label>female: <input type="radio" name="female"></label>
+            </fieldset>
+            <button type="submit">Register</button>
+        </div> 
+        <div>
+            <p>Already have an account ? <a href="login.html">Log in here</a></p>
+        </div>
+        <div>
+            <iframe src="java-logo.png"><p>Java Logo</p></iframe>
+            <iframe src="demo1.html"></iframe>
+            
+        </div>
+
+    </body>
+</html>

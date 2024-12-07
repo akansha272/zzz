@@ -1,0 +1,21 @@
+Guidelines:
+
+Authentication - it is the process to know "who are you?"
+
+Authorization - it is the process to know "what can you do?"
+
+Authentication Methods-
+-----------------
+1. Session based Authentication
+2. Token Based Authentication
+3. OAuth 2.0 Authentication
+4. Passport.js
+
+How to get the JWT authentication in Node application:
+-----------------------------
+jsonwebtoken and bcryptjs libraries are required for user authentication and security purpose.
+1. Install the required libraries using npm install jsonwebtoken bcryptjs command in terminal.
+jsonwebtoken: used to generate and verify JSON web token, jwt is one of the compact and URL safe token format which is use of securely transmitting information between client and server.
+jsonwebtoken - jwt.sign(), jwt.verify()
+bcryptjs: used to hash and compare password.
+    bcrypt.hash(), bcrypt.compare()

@@ -1,0 +1,1 @@
+let result = await Promise.reject('Failure').catch(console.log)

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Property</title>
+    <style>
+        div.box{
+            width: 100px;
+            height: 100px;
+            margin-bottom: 14px;
+            background-color: pink;
+            transition-property: width height;
+            transition-duration: 5s;
+        }
+        .box:hover{
+            width: 200px;
+            height: 250px;
+        }
+        div.box1{
+            width: 200px;
+            height: 150px;
+            background-color: palevioletred;
+            transition-property: background-color;
+            transition-delay: -2s;
+        }
+        .box1:hover{
+            background-color: purple;
+        }
+        .box11{transition-timing-function: ease;}
+        .box12{transition-timing-function: ease-in;}
+        .box13{transition-timing-function: ease-out;}
+        .box14{transition-timing-function: ease-in-out;}
+        .box15{transition-timing-function: linear;}
+        .box16{transition-timing-function: step-start;}
+        .box17{transition-timing-function: step-end;}
+        .box18{transition-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);}
+        .box:hover{width:500px;}
+    </style>
+</head>
+<body>
+    <h1><center>Transition</center></h1>
+    <p>Let's hover the mouse over the element.</p>
+    <div class="box"></div>
+    <div class="box1"></div>
+    <!-- ease, linear, ease-in, ease-out, ease-in-out, step-start, step-end, bezier -->
+    <div class="box box11">Ease</div>
+    <div class="box box12">Ease-in</div>
+    <div class="box box13">Ease-out</div>
+    <div class="box box14">Ease-in-out</div>
+    <div class="box box15">Linear</div>
+    <div class="box box16">step-start</div>
+    <div class="box box17">step-end</div>
+    <div class="box box18">Bezier</div>
+
+
+</body>
+</html>

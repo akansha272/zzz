@@ -1,0 +1,56 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: aqua;
+    font-size: 805; 
+    /* 1em=10px */
+}
+
+span{
+    background-color: aquamarine;
+    color: orange;
+}
+
+strong{
+    color: pink;
+}
+
+em{
+    color: violet;
+}
+
+*{
+    padding: 5px;
+}
+ul.item{
+    padding: 5px;
+    list-style: lower-alpha;
+}
+
+ul.item li{
+    color: gray;
+    text-decoration: double;
+}
+/* + --> adjacent sibling selector, it is used to select the item just after the first mentioned item and is used to give style to it  */
+h2 + p {
+    color: black;
+    font-style: oblique;
+}
+
+ul.work + p{
+    color: coral;
+    text-align: center;
+}
+
+/* this is the one that is used to select the child selector */
+ul > li {
+    list-style: georgian;
+}
+
+#p1.oblique{
+    background-color: blanchedalmond;
+
+}
+p.italic{
+    font-size: medium;
+    font-weight:400;
+}

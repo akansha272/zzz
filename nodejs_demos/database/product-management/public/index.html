@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Product Management</h1>
+        <h2>Add New Product</h2>
+        <form id="addProductForm">
+            <input type="text" id="name" name="name" placeholder="product name" required>
+            <input type="text" id="description" name="description" placeholder="product description">
+            <input type="number" id="price" name="price" required>
+            <input type="number" id="stock" name="stock" required>
+            <button type="submit">Add product</button>
+
+        </form>
+        <script>
+            document.getElementById('addProductForm').addEventListener('submit' , function(event){
+                event.preventDefault();
+                const name = document.getElementById('name').value;
+                const  description  = document.getElementById(' description ').value;
+                const price= document.getElementById('price').value;
+                const stock = document.getElementById('stock').value;
+                
+                fetch('/product' ,{
+                    method:'POST', 
+                    headers:{ 'Content-Type':'application/json'},
+                    body:JSON.stringify({name, description, price, stock })
+                })
+                .then(response => {if(response.ok){
+                    alert('Product added');
+                    window.location.reload(); 
+                }else{
+                    alert('Error adding product.');
+                }
+            });
+        });
+        </script>
+    </body>
+</html>

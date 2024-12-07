@@ -1,0 +1,152 @@
+installation
+package registry
+package json
+command :
+
+npm init -> create new package.json file for the project
+
+npm install <package-name>
+
+npm update
+
+npm run <script name>
+
+REPL - read evaluate print loop 
+
+REPL terminal -
+read - read input
+evaluate - test/eval code you entered
+print - output/print the result
+loop - allows you to enter more command
+
+uses :
+1. test snippets of code
+2. exploring Node js API
+3. Debugging
+4. Learning and Experimentation
+=========================================================
+1- node
+
+2+3
+let name = "node"
+name.length
+
+const fs = require('fs');
+fs.readFileSync('path',utf8);
+## hello
+
+let obj = {name:"Node", version:18.0};
+obj.nameobj.version
+================
+Global Variable:
+1. global - it is similar to window object
+2. __dirname - directory name of the current module
+3. __filename - gives path of the current file
+4. process - gives information about the current node process
+5. Buffer - global class and used to work with binary data directory | in memory
+
+=========================
+Event Loop:
+
+phases for the Event Loop
+1. Timer
+2. I/0 callbacks
+3. idle, prepare
+4. Poll
+5. check
+6. close callback
+
+Flow of Event loop:
+Timers -> I/O Callback -> Poll -> check (executes setImmediate() callback) -> close callbacks
+=========================
+Event - driven programming in node.js
+ 
+listeners
+*************************************
+Events
+EventEmitter
+Callbacks
+====================
+ 
+real time use of Events
+****************
+web servers
+Real-Time Communication
+File System operation
+Database
+ 
+========================
+Types of Events
+browser event
+*************************************
+File System events
+Http Events
+Custom events
+Stream Events
+ 
+nodejs runs on server side: does not run directly on the browser
+ 
+ 
+==========================
+eventEmitter Class =
+1 > it is the core part of node js and provide interface for emitting and handling custom events
+ 
+2 > object that use EventEmitter can emit events and listen to those using Event
+    listeners(callback)
+ 
+========================
+callback function and Asynchronous Programming
+1. callback is the heart of the event driven programming when event emit node js invokes the appropriate callback function asynchronously
+2. Asynchronous Programming - allows Node.js to perform non blocking operations like file reading, database connection
+
+=======================
+Manage Listeners -
+1. on() - adds a listener to the end of the listener queue
+2. Once() - it will execute only the first time the event is emit.
+=========================
+Key concept - 
+1. Browser Events
+2. Node js as a web Server
+3. Web sockets for real time communication
+======================
+Template Engine:
+1. EJS
+2. pug <----
+    project structure
+        login-app
+            |
+            app.js/server.js
+            package.json
+            views/
+                login.pug
+                success.pug
+            package-lock.json
+            node_module
+=========================
+index.html
+<html>
+<h1> done! </h1>
+</html>
+
+index.pug
+html
+    head title Hello..
+    body
+        h1 heading
+        p this is a paragraph
+================================
+Body Parser -  it is a middleware in node js, it parses incoming request bodies and make them available as object
+
+npm install body-parser
+
+type of body parser - json(), raw(), text()
+
+Route
+============
+static vs Dynamic route
+app.get("/home", ()=>{res.send('welcome')});
+
+dynamic - app.get('/user/:id, ()=>{
+    const userid = req.params.id
+   res.send(userid)
+})

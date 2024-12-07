@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function getLocation(){
+                if(navigator.geolocation){
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                }else{
+                    document.getElementById("demo").innerHTML ="Geolocation is not found"
+                }
+            }
+            function showPosition(){
+                document.getElementById("demo").innerHTML = "Latitude"+position.coords.latitude+"<br> Longitude:"+position.coords.longitude;
+            }
+        </script>
+    </head>
+    <body>
+        <!-- getCurrentPosition, watchPosition, clearWatch -->
+         <p>Click here to get your position</p>
+         <button onclick="getLocation()">Find my Location</button>
+         <p id="demo"></p>
+    </body>
+</html>

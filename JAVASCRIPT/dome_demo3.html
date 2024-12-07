@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getallparaElems(){
+            const allpara=document.getElementsByTagName("p");
+            const num = allpara.length;
+            alert(`There are ${num} paragraph in this document that we have`);
+        }
+        function divparaElems(){
+            const alldiv1=document.getElementById("div1");
+            const div1para = alldiv1.getElementsByTagName("p");
+            const num = div1para.length;
+            alert(`There are ${num} paragraph in this div1 that we have`);
+        }
+        function divpara2Elems(){
+            const alldiv2=document.getElementById("div2");
+            const div2para = alldiv2.getElementsByTagName("p");
+            const num = div2para.length;
+            alert(`There are ${num} paragraph in this div2 that we have`);
+        }
+    </script>
+</head>
+<body style="border: solid rgb(214, 246, 125) 4px;">
+    <p>text1</p>
+    <p>text2</p>
+    <div id="div1" style="border: solid blue 4px">
+        <p>text1</p>
+        <p>text2</p>
+        <p>text3</p>
+        <div id="div2" style="border: solid rgb(233, 112, 231) 4px">
+            <p>text4</p>
+            <p>text5</p>
+            <p>text6</p>
+        </div>
+    </div>
+    <p>text1</p>
+    <p>text2</p>
+    <p>text3</p>
+    <button onclick="getallparaElems()">Show all P elements</button>
+    <button onclick="divparaElems()">Show all p elements in div1 element</button>
+    <button onclick="divpara2Elems()">Show all p elements in div2 element</button>
+</body>
+</html>

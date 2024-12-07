@@ -1,0 +1,20 @@
+For database connectivity with Node js
+================
+1. NPM and Node js required, installed
+2. Database must be present
+3. Dependencies - express, mysql2, body-parser
+express - web framework for node.js
+mysql2 - mysql driver for node.js/Mysql client for node js
+body-parser - middleware for node.js to parse the body of the HTTP request
+
+connectivity -
+    -> mysql instance to connect with the database  
+    -> with mysql2 instance call createConnection
+        -> host : localhost
+        -> user : root
+        -> password : password
+        -> port -> 3306
+        -> database -> mydata
+        
+4. After connecting with the database mention the name of the schema/object/table name in the query to connect/fect data from the object/table
+5. Arrange the routes to perform the curd operation of the database tables
